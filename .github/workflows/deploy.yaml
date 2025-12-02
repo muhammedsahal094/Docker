@@ -22,15 +22,12 @@ jobs:
           node-version: 18
 
       - name: Install Dependencies
-        working-directory: docker
         run: npm install
 
       - name: Skip Tests for CI/CD Demo
-        working-directory: docker
         run: echo "Skipping tests for CI/CD demo"
 
       - name: Build React App
-        working-directory: docker
         run: CI=false npm run build
 
       - name: Login to docker Hub
